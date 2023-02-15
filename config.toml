@@ -1,0 +1,10 @@
+baseURL = 'http://example.org/'
+defaultContentLanguage = "zh-cn"
+languageCode = 'zh-CN'
+title = 'handbook'
+theme= 'hugo-book'
+
+[params]
+BookTheme = 'auto'
+BookSection = '*'
+BookRepo = 'https://github.com/realZhangChi/handbook'
