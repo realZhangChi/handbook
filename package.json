@@ -1,0 +1,26 @@
+{
+  "name": "handbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realZhangChi/handbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realZhangChi/handbook/issues"
+  },
+  "homepage": "https://github.com/realZhangChi/handbook#readme",
+  "dependencies": {
+    "@tinacms/cli": "^1.2.1",
+    "tinacms": "^1.2.1"
+  }
+}

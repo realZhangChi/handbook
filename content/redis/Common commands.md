@@ -548,7 +548,7 @@ Get all the fields and values in a hash. See also [redis.io](https://redis.io/co
 HDEL key field [field ...]
 ```
 
-Delete one or more hash fields. See also [redis.io]().
+Delete one or more hash fields. See also [redis.io](https://redis.io/commands/hdel/).
 <--->
 
 #### HLEN
