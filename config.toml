@@ -1,10 +1,11 @@
 baseURL = 'http://example.org/'
 defaultContentLanguage = "zh-cn"
 languageCode = 'zh-CN'
-title = 'handbook'
+title = "chi's handbook"
 theme= 'hugo-book'
 
 [params]
 BookTheme = 'auto'
 BookSection = '*'
 BookRepo = 'https://github.com/realZhangChi/handbook'
+BookCommitPath = 'commit'
