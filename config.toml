@@ -1,6 +1,5 @@
 baseURL = 'http://example.org/'
-defaultContentLanguage = "zh-cn"
-languageCode = 'zh-CN'
+languageCode = 'en-us'
 title = "chi's handbook"
 theme= 'hugo-book'
 
