@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "f02e5c08ebe7c5f0",
@@ -146,7 +147,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "eb907464b2e02c72",
+  "active": "7ae3b4dc9fdef8af",
   "lastOpenFiles": [
     "().md",
     "content/redis/Common commands.md",
