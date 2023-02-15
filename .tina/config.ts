@@ -23,6 +23,7 @@ export default defineConfig({
         name: "redis",
         label: "Redis",
         path: "content/redis",
+        format: 'md',
         fields: [
           {
             type: "string",
