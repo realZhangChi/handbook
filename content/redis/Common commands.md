@@ -41,6 +41,10 @@ SELECT index
 ```
 Change the selected database for the current connection. see also [redis.io](https://redis.io/commands/select/).
 
+<--->
+
+<--->
+
 {{< /columns >}}
 
 ### Key
@@ -142,9 +146,7 @@ SETRANGE key offset value
 ```
 Overwrite part of a string at key starting at the specified offset. See also [redis.io](https://redis.io/commands/setrange/).
 
-{{< /columns >}}
-
-{{< columns >}}
+<--->
 
 #### MGET
 
@@ -153,7 +155,9 @@ MGET key [key ...]
 ```
 Get the values of all given keys. See also [redis.io](https://redis.io/commands/mget/).
 
-<--->
+{{< /columns >}}
+
+{{< columns >}}
 
 #### MSET
 
@@ -173,9 +177,7 @@ MSETNX key value [key value ...]
 
 Set multiple keys to multiple values, only if none of the key exist. See also [redis.io](https://redis.io/commands/msetnx/).
 
-{{< /columns >}}
-
-{{< columns >}}
+<--->
 
 #### INCR
 ```
@@ -183,7 +185,9 @@ INCR key
 ```
 Increment the integer value of a key by one. See also [redis.io](https://redis.io/commands/incr/).
 
-<--->
+{{< /columns >}}
+
+{{< columns >}}
 
 #### DECR
 ```
@@ -191,9 +195,7 @@ DECR key
 ```
 Decrement the integer value of a key by one. See also [redis.io](https://redis.io/commands/decr/).
 
-{{< /columns >}}
-
-{{< columns >}}
+<--->
 
 #### INCRBY
 ```
@@ -328,5 +330,128 @@ LINSERT key <BEFORE | AFTER> pivot element
 ```
 
 Insert an element before or after another element in list. See also [redis.io](https://redis.io/commands/linsert/).
+
+<--->
+
+{{< /columns >}}
+
+### Set 
+
+{{< columns >}}
+
+#### SADD
+
+```
+SADD key member [member ...]
+```
+
+Add one or more members to a set. See also [redis.io](https://redis.io/commands/sadd/).
+
+<--->
+
+#### SMEMBERS
+
+```
+SMEMBERS key
+```
+
+Get all the members in a set. See also [redis.io](https://redis.io/commands/smembers/).
+
+<--->
+
+#### SISMEMBER
+
+```
+SISMEMBER key member
+```
+
+Determine if a given value is a member of a set. See also [redis.io](https://redis.io/commands/sismember/).
+
+{{< /columns >}}
+
+{{< columns >}}
+
+#### SCARD
+
+```
+SCARD key
+```
+
+Get the number of members in a set. See also [redis.io](https://redis.io/commands/scard/).
+
+<--->
+
+#### SREM
+
+```
+SREM key member [member ...]
+```
+
+Remove one or more members from a set. See also [redis.io](https://redis.io/commands/srem/).
+
+<--->
+
+#### SRANDMEMBER
+
+```
+SRANDMEMBER key [count]
+```
+
+Get one or multiple random members from a set. See also [redis.io](https://redis.io/commands/srandmember/).
+
+{{< /columns >}}
+
+{{< columns >}}
+
+#### SPOP
+
+```
+SPOP key [count]
+```
+
+Remove and return one or multiple random members from a set. See also [redis.io](https://redis.io/commands/spop/).
+
+<--->
+
+#### SMOVE
+
+```
+SMOVE source destination member
+```
+
+Move a member from one set to another. See also [redis.io](https://redis.io/commands/smove/).
+
+<--->
+
+#### SDIFF
+
+```
+SDIFF key [key ...]
+```
+
+Subtract multiple sets. See also [redis.io](https://redis.io/commands/sdiff/).
+
+{{< /columns >}}
+
+{{< columns >}}
+
+#### SINTER
+
+```
+SINTER key [key ...]
+```
+
+Intersect multiple sets. See also [redis.io](https://redis.io/commands/sinter/).
+
+<--->
+
+#### SUNION
+
+```
+SUNION key [key ...]
+```
+
+Add multiple sets. See also [redis.io](https://redis.io/commands/sunion/).
+<--->
 
 {{< /columns >}}

@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = "chi's handbook"
+title = "Handbook"
 theme= 'hugo-book'
 
 [params]
