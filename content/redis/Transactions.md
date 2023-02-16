@@ -45,6 +45,8 @@ SET mykey $val
 EXEC
 ```
 
+It is also possible to use the `UNWATCH` command manually in order to flush all the watched keys.
+
 ## See also
 
 [Transaction | Redis](https://redis.io/docs/manual/transactions/).
