@@ -1,15 +1,15 @@
 ---
 title: "Common commands"
 date: 2023-02-15T09:20:58+08:00
+weight: 1
 draft: false
 ---
 
-## Redis common commands
+## Database
 
-### Database
+{{< columns >}}
 
-{{< columns >}} 
-#### DBSIZE
+### DBSIZE
 
 ``` bash
 DBSIZE
@@ -19,7 +19,7 @@ Return the number of keys in the currently-selected database. see also [redis.io
 
 <--->
 
-#### FLUSHALL
+### FLUSHALL
 
 ``` bash
 
@@ -30,7 +30,7 @@ Remove all keys from all database. see also [redis.io](https://redis.io/commands
 
 <--->
 
-#### FLUSHDB
+### FLUSHDB
 
 ``` bash
 FLUSHDB [ASYNC | SYNC]
@@ -42,7 +42,7 @@ Remove all keys from the current database. see also [redis.io](https://redis.io/
 
 {{< columns >}}
 
-#### SELECT
+### SELECT
 
 ``` bash
 SELECT index
@@ -56,11 +56,11 @@ Change the selected database for the current connection. see also [redis.io](htt
 
 {{< /columns >}}
 
-### Key
+## Key
 
 {{< columns >}}
 
-#### KEYS
+### KEYS
 
 ``` bash
 KEYS pattern
@@ -70,7 +70,7 @@ Returns all keys matching pattern. See also [redis.io](https://redis.io/command
 
 <--->
 
-#### EXISTS
+### EXISTS
 
 ``` bash
 EXISTS key [key ...]
@@ -80,7 +80,7 @@ Determine if a key exists. See also [redis.io](https://redis.io/commands/exists/
 
 <--->
 
-#### EXPIRE
+### EXPIRE
 
 ``` bash
 EXPIRE key seconds [NX | XX | GT | LT]
@@ -92,7 +92,7 @@ Set a key's time to live in seconds. See also [redis.io](https://redis.io/comman
 
 {{< columns >}}
 
-#### TTL
+### TTL
 
 ``` bash
 TTL key
@@ -102,7 +102,7 @@ Get the time to live for a key in seconds. See also [redis.io](https://redis.io/
 
 <--->
 
-#### TYPE
+### TYPE
 
 ``` bash
 TYPE key
@@ -112,7 +112,7 @@ Determine the type stored at key. See also [redis.io](https://redis.io/commands/
 
 <--->
 
-#### STRLEN
+### STRLEN
 
 ``` bash
 STRLEN key
@@ -122,11 +122,11 @@ Get the length of the value stored in a key. See also [redis.io](https://redis.i
 
 {{< /columns >}}
 
-### Value
+## Value
 
 {{< columns >}}
 
-#### GET
+### GET
 
 ``` bash
 GET key
@@ -136,7 +136,7 @@ Get the value of a key. See also [redis.io](https://redis.io/commands/get/).
 
 <--->
 
-#### GETRANGE
+### GETRANGE
 
 ``` bash
 GETRANGE key start end
@@ -146,7 +146,7 @@ Get a substring of the string stored at a key. See also [redis.io](https://redis
 
 <--->
 
-#### APPEND
+### APPEND
 
 ``` bash
 APPEND key value
@@ -158,7 +158,7 @@ Append a value to a key. See also [redis.io](https://redis.io/commands/append/).
 
 {{< columns >}}
 
-#### SET
+### SET
 
 ``` bash
 SET key value [NX | XX] [GET] [EX seconds | PX milliseconds |
@@ -169,7 +169,7 @@ Set the string value of a key. See also [redis.io](https://redis.io/commands/set
 
 <--->
 
-#### SETRANGE
+### SETRANGE
 
 ``` bash
 SETRANGE key offset value
@@ -179,7 +179,7 @@ Overwrite part of a string at key starting at the specified offset. See also [re
 
 <--->
 
-#### MGET
+### MGET
 
 ``` bash
 MGET key [key ...]
@@ -191,7 +191,7 @@ Get the values of all given keys. See also [redis.io](https://redis.io/commands/
 
 {{< columns >}}
 
-#### MSET
+### MSET
 
 ``` bash
 MSET key value [key value ...]
@@ -201,7 +201,7 @@ Set multiple keys to multiple values. See also [redis.io](https://redis.io/comma
 
 <--->
 
-#### MSETNX
+### MSETNX
 
 ``` bash
 MSETNX key value [key value ...]
@@ -211,7 +211,7 @@ Set multiple keys to multiple values, only if none of the key exist. See also [r
 
 <--->
 
-#### INCR
+### INCR
 
 ``` bash
 INCR key
@@ -223,7 +223,7 @@ Increment the integer value of a key by one. See also [redis.io](https://redis.i
 
 {{< columns >}}
 
-#### DECR
+### DECR
 
 ``` bash
 DECR key
@@ -233,7 +233,7 @@ Decrement the integer value of a key by one. See also [redis.io](https://redis.i
 
 <--->
 
-#### INCRBY
+### INCRBY
 
 ``` bash
 INCRBY key increment
@@ -243,7 +243,7 @@ Increment the integer value of a key by the given number. See also [redis.io](ht
 
 <--->
 
-#### DECRBY
+### DECRBY
 
 ``` bash
 DECRBY key decrement
@@ -253,11 +253,11 @@ Decrement the integer value of a key by the given number. See also [redis.io](ht
 
 {{< /columns >}}
 
-### List
+## List
 
 {{< columns >}}
 
-#### LPUSH
+### LPUSH
 
 ``` bash
 LPUSH key element [element ...]
@@ -267,7 +267,7 @@ Prepend one or multiple elements to a list. See also [redis.io](https://redis.io
 
 <--->
 
-#### RPUSH
+### RPUSH
 
 ``` bash
 RPUSH key element [element ...]
@@ -277,7 +277,7 @@ Apend one or multiple elements to a list. See also [redis.io](https://redis.io/c
 
 <--->
 
-#### LRANGE
+### LRANGE
 
 ``` bash
 LRANGE key start stop
@@ -289,7 +289,7 @@ Get a range of elements from a list. See also [redis.io](https://redis.io/comman
 
 {{< columns >}}
 
-#### LINDEX
+### LINDEX
 
 ``` bash
 LINDEX key index
@@ -299,7 +299,7 @@ Get an element from a list by its index. See also [redis.io](https://redis.io/co
 
 <--->
 
-#### LPOP
+### LPOP
 
 ``` bash
 LPOP key [count]
@@ -309,7 +309,7 @@ Remove and get the first elements in a list. See also [redis.io](https://redis.i
 
 <--->
 
-#### RPOP
+### RPOP
 
 ``` bash
 RPOP key [count]
@@ -321,7 +321,7 @@ Remove and get the last elements in a list. See also [redis.io](https://redis.io
 
 {{< columns >}}
 
-#### LLEN
+### LLEN
 
 ``` bash
 LLEN key
@@ -331,7 +331,7 @@ Get the length of a list. See also [redis.io](https://redis.io/commands/llen/).
 
 <--->
 
-#### LREM
+### LREM
 
 ``` bash
 LREM key count element
@@ -341,7 +341,7 @@ Remove elements of a list. See also [redis.io](https://redis.io/commands/lrem/).
 
 <--->
 
-#### LTRIM
+### LTRIM
 
 ``` bash
 LTRIM key start stop
@@ -353,7 +353,7 @@ Trim the list **to** the specified range. See also [redis.io](https://redis.io/c
 
 {{< columns >}}
 
-#### LSET
+### LSET
 
 ``` bash
 LSET key index element
@@ -363,7 +363,7 @@ Set the value of an element in a list by its index. See also [redis.io](https://
 
 <--->
 
-#### LINSERT
+### LINSERT
 
 ``` bash
 LINSERT key <BEFORE | AFTER> pivot element
@@ -375,11 +375,11 @@ Insert an element before or after another element in list. See also [redis.io](h
 
 {{< /columns >}}
 
-### Set
+## Set
 
 {{< columns >}}
 
-#### SADD
+### SADD
 
 ``` bash
 SADD key member [member ...]
@@ -389,7 +389,7 @@ Add one or more members to a set. See also [redis.io](https://redis.io/commands/
 
 <--->
 
-#### SMEMBERS
+### SMEMBERS
 
 ``` bash
 SMEMBERS key
@@ -399,7 +399,7 @@ Get all the members in a set. See also [redis.io](https://redis.io/commands/smem
 
 <--->
 
-#### SISMEMBER
+### SISMEMBER
 
 ``` bash
 SISMEMBER key member
@@ -411,7 +411,7 @@ Determine if a given value is a member of a set. See also [redis.io](https://red
 
 {{< columns >}}
 
-#### SCARD
+### SCARD
 
 ``` bash
 SCARD key
@@ -421,7 +421,7 @@ Get the number of members in a set. See also [redis.io](https://redis.io/command
 
 <--->
 
-#### SREM
+### SREM
 
 ``` bash
 SREM key member [member ...]
@@ -431,7 +431,7 @@ Remove one or more members from a set. See also [redis.io](https://redis.io/comm
 
 <--->
 
-#### SRANDMEMBER
+### SRANDMEMBER
 
 ``` bash
 SRANDMEMBER key [count]
@@ -443,7 +443,7 @@ Get one or multiple random members from a set. See also [redis.io](https://redis
 
 {{< columns >}}
 
-#### SPOP
+### SPOP
 
 ``` bash
 SPOP key [count]
@@ -453,7 +453,7 @@ Remove and return one or multiple random members from a set. See also [redis.io]
 
 <--->
 
-#### SMOVE
+### SMOVE
 
 ``` bash
 SMOVE source destination member
@@ -463,7 +463,7 @@ Move a member from one set to another. See also [redis.io](https://redis.io/comm
 
 <--->
 
-#### SDIFF
+### SDIFF
 
 ``` bash
 SDIFF key [key ...]
@@ -475,7 +475,7 @@ Subtract multiple sets. See also [redis.io](https://redis.io/commands/sdiff/).
 
 {{< columns >}}
 
-#### SINTER
+### SINTER
 
 ``` bash
 SINTER key [key ...]
@@ -485,7 +485,7 @@ Intersect multiple sets. See also [redis.io](https://redis.io/commands/sinter/).
 
 <--->
 
-#### SUNION
+### SUNION
 
 ``` bash
 SUNION key [key ...]
@@ -496,11 +496,11 @@ Add multiple sets. See also [redis.io](https://redis.io/commands/sunion/).
 
 {{< /columns >}}
 
-### Hash
+## Hash
 
 {{< columns >}}
 
-#### HGET
+### HGET
 
 ``` bash
 HGET key field
@@ -510,7 +510,7 @@ Get the value of a hash field. See also [redis.io](https://redis.io/commands/hge
 
 <--->
 
-#### HSET
+### HSET
 
 ``` bash
 HSET key field value [field value ...]
@@ -520,7 +520,7 @@ Set the string value of a hash field. See also [redis.io](https://redis.io/comma
 
 <--->
 
-#### HMGET
+### HMGET
 
 ```bash
 HMGET key field [field ...]
@@ -532,7 +532,7 @@ Get the values of all given hash fields. See also [redis.io](https://redis.io/co
 
 {{< columns >}}
 
-#### HGETALL
+### HGETALL
 
 ``` bash
 HGETALL key
@@ -542,7 +542,7 @@ Get all the fields and values in a hash. See also [redis.io](https://redis.io/co
 
 <--->
 
-#### HDEL
+### HDEL
 
 ``` bash
 HDEL key field [field ...]
@@ -551,7 +551,7 @@ HDEL key field [field ...]
 Delete one or more hash fields. See also [redis.io](https://redis.io/commands/hdel/).
 <--->
 
-#### HLEN
+### HLEN
 
 ``` bash
 HLEN key
@@ -563,7 +563,7 @@ Get the number of fields in a hash. See also [redis.io](https://redis.io/command
 
 {{< columns >}}
 
-#### HEXISTS
+### HEXISTS
 
 ``` bash
 HEXISTS key field
@@ -573,7 +573,7 @@ Determine if a hash field exists. See also [redis.io](https://redis.io/commands/
 
 <--->
 
-#### HKEYS
+### HKEYS
 
 ``` bash
 HEXISTS key field
@@ -583,7 +583,7 @@ Get all the fields in a hash. See also [redis.io](https://redis.io/commands/hkey
 
 <--->
 
-#### HVALS
+### HVALS
 
 ``` bash
 HVALS key
@@ -595,7 +595,7 @@ Get all the values in a hash. See also [redis.io](https://redis.io/commands/hval
 
 {{< columns >}}
 
-#### HINCRBY
+### HINCRBY
 
 ``` bash
 HINCRBY key field increment
@@ -605,7 +605,7 @@ Increment the integer value of a hash field by the given number. [redis.io](http
 
 <--->
 
-#### HSETNX
+### HSETNX
 
 ``` bash
 HSETNX key field value
@@ -617,11 +617,11 @@ Set the value of a hash field, only if the field does not exist. See also [redis
 
 {{< /columns >}}
 
-### Sorted Set
+## Sorted Set
 
 {{< columns >}}
 
-#### ZADD
+### ZADD
 
 ``` bash
 ZADD key [NX | XX] [GT | LT] [CH] [INCR] score member [score member...]
@@ -631,7 +631,7 @@ Add one or more members to a sorted set, or update its score if it already exist
 
 <--->
 
-#### ZRANGE
+### ZRANGE
 
 ``` bash
 ZRANGE key start stop [BYSCORE | BYLEX] [REV] [LIMIT offset count] [WITHSCORES]
@@ -641,7 +641,7 @@ Return a range of members in a sorted set. See also [redis.io](https://redis.io/
 
 <--->
 
-#### ZREM
+### ZREM
 
 ``` bash
 ZREM key member [member ...]
@@ -653,7 +653,7 @@ Remove one or more members from a sorted set. See also [redis.io](https://redis.
 
 {{< columns >}}
 
-#### ZCARD
+### ZCARD
 
 ``` bash
 ZCARD key
@@ -663,7 +663,7 @@ Get the number of members in a sorted set. See also [redis.io](https://redis.io/
 
 <--->
 
-#### ZCOUNT
+### ZCOUNT
 
 ``` bash
 ZCOUNT key min max
