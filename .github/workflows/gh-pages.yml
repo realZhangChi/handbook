@@ -21,8 +21,17 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build TinaCMS
+        env:
+          CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} tinacms build
+
       - name: Build
-        run: yarn && yarn build
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
