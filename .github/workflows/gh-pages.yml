@@ -21,15 +21,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Install dependencies
-        run: yarn
-
-      - name: Build TinaCMS
-        env:
-          CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} yarn tinacms build
-
       - name: Build
         run: hugo --minify
 

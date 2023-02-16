@@ -616,3 +616,61 @@ Set the value of a hash field, only if the field does not exist. See also [redis
 <--->
 
 {{< /columns >}}
+
+### Sorted Set
+
+{{< columns >}}
+
+#### ZADD
+
+``` bash
+ZADD key [NX | XX] [GT | LT] [CH] [INCR] score member [score member...]
+```
+
+Add one or more members to a sorted set, or update its score if it already exists. See also [redis.io](https://redis.io/commands/zadd/).
+
+<--->
+
+#### ZRANGE
+
+``` bash
+ZRANGE key start stop [BYSCORE | BYLEX] [REV] [LIMIT offset count] [WITHSCORES]
+```
+
+Return a range of members in a sorted set. See also [redis.io](https://redis.io/commands/zrange/).
+
+<--->
+
+#### ZREM
+
+``` bash
+ZREM key member [member ...]
+```
+
+Remove one or more members from a sorted set. See also [redis.io](https://redis.io/commands/zrem/).
+
+{{< /columns >}}
+
+{{< columns >}}
+
+#### ZCARD
+
+``` bash
+ZCARD key
+```
+
+Get the number of members in a sorted set. See also [redis.io](https://redis.io/commands/zcard/).
+
+<--->
+
+#### ZCOUNT
+
+``` bash
+ZCOUNT key min max
+```
+
+Count the members in a sorted set with scores within the given values. See also [redis.io](https://redis.io/commands/zcount/).
+
+<--->
+
+{{< /columns >}}
