@@ -1,7 +1,7 @@
 ---
 title: "Stored Procedures"
 date: 2023-02-20T15:14:52+08:00
-weight: 4
+weight: 2
 draft: false
 ---
 
