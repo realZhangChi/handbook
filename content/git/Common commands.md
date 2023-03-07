@@ -9,3 +9,9 @@ draft: false
 ``` bash
 git branch -m NEW_BRANCH_NAME
 ```
+
+## Ignore local file modifications
+
+``` bash
+git update-index --no-skip-worktree /path/to/file
+```
