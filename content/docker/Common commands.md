@@ -13,3 +13,11 @@ Copy files/folders between a container and the local filesystem. See also [Docke
 docker cp ./some_file CONTAINER:/work
 docker cp CONTAINER:/var/logs/ /tmp/app_logs
 ```
+
+## Find sha256
+
+``` bash
+docker inspect --format='{{index .RepoDigests 0}}' $IMAGE
+```
+
+See also [Where can I find the sha256 code of a docker image?](https://stackoverflow.com/a/33511811).
