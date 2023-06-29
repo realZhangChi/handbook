@@ -15,3 +15,11 @@ git branch -m NEW_BRANCH_NAME
 ``` bash
 git update-index --no-skip-worktree /path/to/file
 ```
+
+## Delete a Git branch locally
+
+``` bash
+git branch --delete <branchname>
+```
+
+See also [How to delete a Git branch locally](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/delete-local-git-branch-origin-force-merge-all).
