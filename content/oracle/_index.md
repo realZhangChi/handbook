@@ -2,6 +2,7 @@
 title: "Oracle"
 date: 2023-06-06T15:16:42+08:00
 draft: false
+weight: 150
 ---
 
 ## Find duplicates
