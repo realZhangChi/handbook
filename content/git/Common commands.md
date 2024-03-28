@@ -45,3 +45,11 @@ git config --global --unset https.proxy
 ```
 
 See also [git 设置和取消代理](https://gist.github.com/laispace/666dd7b27e9116faece6#gistcomment-2026447)
+
+## How to push empty commits to a remote repository
+
+``` bash
+git commit --allow-empty -m "Trigger Build"
+```
+
+See also [Pushing empty commits to remote](https://stackoverflow.com/questions/20138640/pushing-empty-commits-to-remote)
